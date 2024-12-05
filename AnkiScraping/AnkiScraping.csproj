@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <PackageReference Include="HtmlAgilityPack" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" />
+        <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
+        <PackageReference Include="Microsoft.Extensions.Http" />
+        <PackageReference Include="OneOf" />
+        <PackageReference Include="OneOf.SourceGenerator" />
+        <PackageReference Include="Spectre.Console.Json" />
+    </ItemGroup>
+</Project>

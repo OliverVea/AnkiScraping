@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <ProjectReference Include="..\AnkiScraping\AnkiScraping.csproj"/>
+        <ProjectReference Include="..\AnkiScraping.Cli\AnkiScraping.Cli.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Moq"/>
+        <PackageReference Include="Spectre.Console"/>
+        <PackageReference Include="Spectre.Console.Testing"/>
+        <PackageReference Include="TUnit"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="九.html">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+</Project>

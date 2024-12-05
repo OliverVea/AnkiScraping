@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <AssemblyName>ankicardscraper</AssemblyName>
+        <RootNamespace>AnkiScraping.Host</RootNamespace>
+        <PublishAot>true</PublishAot>
+        <PublishTrimmed>true</PublishTrimmed>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection"/>
+        <PackageReference Include="Spectre.Console"/>
+        <PackageReference Include="Spectre.Console.Cli"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\AnkiScraping\AnkiScraping.csproj" />
+        <ProjectReference Include="..\AnkiScraping.Caching\AnkiScraping.Caching.csproj" />
+    </ItemGroup>
+
+</Project>

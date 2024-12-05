@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+        <PackageReference Include="NeoSmart.Caching.Sqlite" />
+        <PackageReference Include="SQLitePCLRaw.core" />
+        <PackageReference Include="SQLitePCLRaw.provider.winsqlite3" />
+    </ItemGroup>
+</Project>
