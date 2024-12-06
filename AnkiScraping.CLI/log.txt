@@ -1,0 +1,439 @@
+2024-12-06 16:57:25.241 +09:00 [INF] Getting provider for GET type='IKanjiSetProvider'&id='wk'
+2024-12-06 16:57:25.273 +09:00 [INF] Resolved provider for GET type='IKanjiSetProvider'&id='wk' to AnkiScraping.WaniKani.WaniKaniKanjiSetProvider
+2024-12-06 16:57:25.277 +09:00 [INF] Fetching kanji level set from WaniKani. Level: 2, URL: https://www.wanikani.com/level/2
+2024-12-06 16:57:25.292 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/level/2
+2024-12-06 16:57:25.299 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/level/2
+2024-12-06 16:57:25.302 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/level/2
+2024-12-06 16:57:25.929 +09:00 [INF] Received HTTP response headers after 624.4438ms - 200
+2024-12-06 16:57:25.935 +09:00 [INF] End processing HTTP request after 639.7756ms - 200
+2024-12-06 16:57:26.212 +09:00 [INF] Getting HTML for https://www.wanikani.com/level/2 took "00:00:00.9286561" ms. Cached false
+2024-12-06 16:57:26.231 +09:00 [INF] Found kanji set for level: 2, Kanji: 玉本子丸正土犬夕出目火五四手天王左中月々田右六小立丁日刀才千木水白文円
+2024-12-06 16:57:26.235 +09:00 [INF] Getting information for 35 kanji characters (single: 0, list: 0, sets: 35)
+2024-12-06 16:57:26.237 +09:00 [INF] Getting information for kanji set ["玉","本","子","丸","正","土","犬","夕","出","目","火","五","四","手","天","王","左","中","月","々","田","右","六","小","立","丁","日","刀","才","千","木","水","白","文","円"] from provider GET type='IKanjiInformationProvider'&id=any
+2024-12-06 16:57:26.243 +09:00 [INF] Getting provider for GET type='IKanjiInformationProvider'&id=any
+2024-12-06 16:57:26.244 +09:00 [INF] Resolved provider for GET type='IKanjiInformationProvider'&id=any to AnkiScraping.WaniKani.WaniKaniKanjiInformationProvider
+2024-12-06 16:57:26.245 +09:00 [INF] Resolved provider GET type='IKanjiInformationProvider'&id=any to provider with key IKanjiInformationProvider: wk
+2024-12-06 16:57:26.249 +09:00 [INF] Getting information for kanji set ["玉","本","子","丸","正","土","犬","夕","出","目","火","五","四","手","天","王","左","中","月","々","田","右","六","小","立","丁","日","刀","才","千","木","水","白","文","円"]
+2024-12-06 16:57:26.254 +09:00 [INF] Getting information for kanji 玉
+2024-12-06 16:57:26.255 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "玉", URL: https://www.wanikani.com/kanji/玉
+2024-12-06 16:57:26.256 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/玉
+2024-12-06 16:57:26.258 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E7%8E%89
+2024-12-06 16:57:26.259 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E7%8E%89
+2024-12-06 16:57:26.458 +09:00 [INF] Received HTTP response headers after 198.6669ms - 200
+2024-12-06 16:57:26.459 +09:00 [INF] End processing HTTP request after 200.6399ms - 200
+2024-12-06 16:57:26.464 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/玉 took "00:00:00.2080845" ms. Cached false
+2024-12-06 16:57:26.468 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:26.485 +09:00 [INF] Scraped WaniKani for kanji: "玉"
+2024-12-06 16:57:26.486 +09:00 [INF] Found information for kanji 玉
+2024-12-06 16:57:26.493 +09:00 [INF] Added card for kanji "玉"
+2024-12-06 16:57:26.494 +09:00 [INF] Getting information for kanji 本
+2024-12-06 16:57:26.494 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "本", URL: https://www.wanikani.com/kanji/本
+2024-12-06 16:57:26.495 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/本
+2024-12-06 16:57:26.496 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E6%9C%AC
+2024-12-06 16:57:26.497 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E6%9C%AC
+2024-12-06 16:57:26.704 +09:00 [INF] Received HTTP response headers after 206.9705ms - 200
+2024-12-06 16:57:26.705 +09:00 [INF] End processing HTTP request after 208.8528ms - 200
+2024-12-06 16:57:26.711 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/本 took "00:00:00.2156796" ms. Cached false
+2024-12-06 16:57:26.715 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:26.720 +09:00 [INF] Scraped WaniKani for kanji: "本"
+2024-12-06 16:57:26.721 +09:00 [INF] Found information for kanji 本
+2024-12-06 16:57:26.721 +09:00 [INF] Added card for kanji "本"
+2024-12-06 16:57:26.722 +09:00 [INF] Getting information for kanji 子
+2024-12-06 16:57:26.722 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "子", URL: https://www.wanikani.com/kanji/子
+2024-12-06 16:57:26.723 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/子
+2024-12-06 16:57:26.724 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%AD%90
+2024-12-06 16:57:26.725 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%AD%90
+2024-12-06 16:57:26.955 +09:00 [INF] Received HTTP response headers after 230.0771ms - 200
+2024-12-06 16:57:26.956 +09:00 [INF] End processing HTTP request after 232.2771ms - 200
+2024-12-06 16:57:26.967 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/子 took "00:00:00.2412433" ms. Cached false
+2024-12-06 16:57:26.971 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:26.977 +09:00 [INF] Scraped WaniKani for kanji: "子"
+2024-12-06 16:57:26.977 +09:00 [INF] Found information for kanji 子
+2024-12-06 16:57:26.978 +09:00 [INF] Added card for kanji "子"
+2024-12-06 16:57:26.978 +09:00 [INF] Getting information for kanji 丸
+2024-12-06 16:57:26.979 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "丸", URL: https://www.wanikani.com/kanji/丸
+2024-12-06 16:57:26.980 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/丸
+2024-12-06 16:57:26.980 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E4%B8%B8
+2024-12-06 16:57:26.981 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E4%B8%B8
+2024-12-06 16:57:27.182 +09:00 [INF] Received HTTP response headers after 200.1942ms - 200
+2024-12-06 16:57:27.182 +09:00 [INF] End processing HTTP request after 201.8496ms - 200
+2024-12-06 16:57:27.185 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/丸 took "00:00:00.2052960" ms. Cached false
+2024-12-06 16:57:27.187 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:27.193 +09:00 [INF] Scraped WaniKani for kanji: "丸"
+2024-12-06 16:57:27.193 +09:00 [INF] Found information for kanji 丸
+2024-12-06 16:57:27.194 +09:00 [INF] Added card for kanji "丸"
+2024-12-06 16:57:27.195 +09:00 [INF] Getting information for kanji 正
+2024-12-06 16:57:27.195 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "正", URL: https://www.wanikani.com/kanji/正
+2024-12-06 16:57:27.196 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/正
+2024-12-06 16:57:27.197 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E6%AD%A3
+2024-12-06 16:57:27.197 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E6%AD%A3
+2024-12-06 16:57:27.416 +09:00 [INF] Received HTTP response headers after 217.9291ms - 200
+2024-12-06 16:57:27.416 +09:00 [INF] End processing HTTP request after 219.6661ms - 200
+2024-12-06 16:57:27.420 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/正 took "00:00:00.2247575" ms. Cached false
+2024-12-06 16:57:27.422 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:27.424 +09:00 [INF] Scraped WaniKani for kanji: "正"
+2024-12-06 16:57:27.425 +09:00 [INF] Found information for kanji 正
+2024-12-06 16:57:27.426 +09:00 [INF] Added card for kanji "正"
+2024-12-06 16:57:27.426 +09:00 [INF] Getting information for kanji 土
+2024-12-06 16:57:27.427 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "土", URL: https://www.wanikani.com/kanji/土
+2024-12-06 16:57:27.428 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/土
+2024-12-06 16:57:27.428 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%9C%9F
+2024-12-06 16:57:27.429 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%9C%9F
+2024-12-06 16:57:27.638 +09:00 [INF] Received HTTP response headers after 208.9625ms - 200
+2024-12-06 16:57:27.639 +09:00 [INF] End processing HTTP request after 210.6504ms - 200
+2024-12-06 16:57:27.642 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/土 took "00:00:00.2149130" ms. Cached false
+2024-12-06 16:57:27.644 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:27.646 +09:00 [INF] Scraped WaniKani for kanji: "土"
+2024-12-06 16:57:27.646 +09:00 [INF] Found information for kanji 土
+2024-12-06 16:57:27.647 +09:00 [INF] Added card for kanji "土"
+2024-12-06 16:57:27.648 +09:00 [INF] Getting information for kanji 犬
+2024-12-06 16:57:27.648 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "犬", URL: https://www.wanikani.com/kanji/犬
+2024-12-06 16:57:27.649 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/犬
+2024-12-06 16:57:27.649 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E7%8A%AC
+2024-12-06 16:57:27.650 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E7%8A%AC
+2024-12-06 16:57:27.855 +09:00 [INF] Received HTTP response headers after 204.1615ms - 200
+2024-12-06 16:57:27.855 +09:00 [INF] End processing HTTP request after 205.791ms - 200
+2024-12-06 16:57:27.857 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/犬 took "00:00:00.2087910" ms. Cached false
+2024-12-06 16:57:27.859 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:27.861 +09:00 [INF] Scraped WaniKani for kanji: "犬"
+2024-12-06 16:57:27.861 +09:00 [INF] Found information for kanji 犬
+2024-12-06 16:57:27.861 +09:00 [INF] Added card for kanji "犬"
+2024-12-06 16:57:27.862 +09:00 [INF] Getting information for kanji 夕
+2024-12-06 16:57:27.862 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "夕", URL: https://www.wanikani.com/kanji/夕
+2024-12-06 16:57:27.866 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/夕
+2024-12-06 16:57:27.866 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%A4%95
+2024-12-06 16:57:27.867 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%A4%95
+2024-12-06 16:57:28.063 +09:00 [INF] Received HTTP response headers after 196.1101ms - 200
+2024-12-06 16:57:28.064 +09:00 [INF] End processing HTTP request after 197.5661ms - 200
+2024-12-06 16:57:28.071 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/夕 took "00:00:00.2057641" ms. Cached false
+2024-12-06 16:57:28.073 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:28.073 +09:00 [INF] Scraped WaniKani for kanji: "夕"
+2024-12-06 16:57:28.074 +09:00 [INF] Found information for kanji 夕
+2024-12-06 16:57:28.074 +09:00 [INF] Added card for kanji "夕"
+2024-12-06 16:57:28.074 +09:00 [INF] Getting information for kanji 出
+2024-12-06 16:57:28.075 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "出", URL: https://www.wanikani.com/kanji/出
+2024-12-06 16:57:28.076 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/出
+2024-12-06 16:57:28.077 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%87%BA
+2024-12-06 16:57:28.077 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%87%BA
+2024-12-06 16:57:28.289 +09:00 [INF] Received HTTP response headers after 211.9803ms - 200
+2024-12-06 16:57:28.290 +09:00 [INF] End processing HTTP request after 213.0874ms - 200
+2024-12-06 16:57:28.296 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/出 took "00:00:00.2212778" ms. Cached false
+2024-12-06 16:57:28.299 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:28.300 +09:00 [INF] Scraped WaniKani for kanji: "出"
+2024-12-06 16:57:28.301 +09:00 [INF] Found information for kanji 出
+2024-12-06 16:57:28.301 +09:00 [INF] Added card for kanji "出"
+2024-12-06 16:57:28.301 +09:00 [INF] Getting information for kanji 目
+2024-12-06 16:57:28.302 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "目", URL: https://www.wanikani.com/kanji/目
+2024-12-06 16:57:28.303 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/目
+2024-12-06 16:57:28.304 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E7%9B%AE
+2024-12-06 16:57:28.304 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E7%9B%AE
+2024-12-06 16:57:28.515 +09:00 [INF] Received HTTP response headers after 210.3198ms - 200
+2024-12-06 16:57:28.516 +09:00 [INF] End processing HTTP request after 212.0044ms - 200
+2024-12-06 16:57:28.524 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/目 took "00:00:00.2208976" ms. Cached false
+2024-12-06 16:57:28.525 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:28.526 +09:00 [INF] Scraped WaniKani for kanji: "目"
+2024-12-06 16:57:28.526 +09:00 [INF] Found information for kanji 目
+2024-12-06 16:57:28.527 +09:00 [INF] Added card for kanji "目"
+2024-12-06 16:57:28.527 +09:00 [INF] Getting information for kanji 火
+2024-12-06 16:57:28.528 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "火", URL: https://www.wanikani.com/kanji/火
+2024-12-06 16:57:28.529 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/火
+2024-12-06 16:57:28.529 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E7%81%AB
+2024-12-06 16:57:28.530 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E7%81%AB
+2024-12-06 16:57:28.743 +09:00 [INF] Received HTTP response headers after 212.8693ms - 200
+2024-12-06 16:57:28.744 +09:00 [INF] End processing HTTP request after 214.528ms - 200
+2024-12-06 16:57:28.752 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/火 took "00:00:00.2233809" ms. Cached false
+2024-12-06 16:57:28.753 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:28.754 +09:00 [INF] Scraped WaniKani for kanji: "火"
+2024-12-06 16:57:28.755 +09:00 [INF] Found information for kanji 火
+2024-12-06 16:57:28.756 +09:00 [INF] Added card for kanji "火"
+2024-12-06 16:57:28.756 +09:00 [INF] Getting information for kanji 五
+2024-12-06 16:57:28.756 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "五", URL: https://www.wanikani.com/kanji/五
+2024-12-06 16:57:28.757 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/五
+2024-12-06 16:57:28.758 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E4%BA%94
+2024-12-06 16:57:28.758 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E4%BA%94
+2024-12-06 16:57:28.957 +09:00 [INF] Received HTTP response headers after 199.1374ms - 200
+2024-12-06 16:57:28.958 +09:00 [INF] End processing HTTP request after 200.4539ms - 200
+2024-12-06 16:57:28.960 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/五 took "00:00:00.2035584" ms. Cached false
+2024-12-06 16:57:28.962 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:28.964 +09:00 [INF] Scraped WaniKani for kanji: "五"
+2024-12-06 16:57:28.964 +09:00 [INF] Found information for kanji 五
+2024-12-06 16:57:28.965 +09:00 [INF] Added card for kanji "五"
+2024-12-06 16:57:28.965 +09:00 [INF] Getting information for kanji 四
+2024-12-06 16:57:28.966 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "四", URL: https://www.wanikani.com/kanji/四
+2024-12-06 16:57:28.967 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/四
+2024-12-06 16:57:28.968 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%9B%9B
+2024-12-06 16:57:28.968 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%9B%9B
+2024-12-06 16:57:29.174 +09:00 [INF] Received HTTP response headers after 204.9887ms - 200
+2024-12-06 16:57:29.174 +09:00 [INF] End processing HTTP request after 206.6516ms - 200
+2024-12-06 16:57:29.176 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/四 took "00:00:00.2100130" ms. Cached false
+2024-12-06 16:57:29.180 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:29.181 +09:00 [INF] Scraped WaniKani for kanji: "四"
+2024-12-06 16:57:29.182 +09:00 [INF] Found information for kanji 四
+2024-12-06 16:57:29.182 +09:00 [INF] Added card for kanji "四"
+2024-12-06 16:57:29.183 +09:00 [INF] Getting information for kanji 手
+2024-12-06 16:57:29.183 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "手", URL: https://www.wanikani.com/kanji/手
+2024-12-06 16:57:29.184 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/手
+2024-12-06 16:57:29.184 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E6%89%8B
+2024-12-06 16:57:29.184 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E6%89%8B
+2024-12-06 16:57:29.404 +09:00 [INF] Received HTTP response headers after 219.642ms - 200
+2024-12-06 16:57:29.405 +09:00 [INF] End processing HTTP request after 220.9632ms - 200
+2024-12-06 16:57:29.411 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/手 took "00:00:00.2273956" ms. Cached false
+2024-12-06 16:57:29.412 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:29.415 +09:00 [INF] Scraped WaniKani for kanji: "手"
+2024-12-06 16:57:29.415 +09:00 [INF] Found information for kanji 手
+2024-12-06 16:57:29.416 +09:00 [INF] Added card for kanji "手"
+2024-12-06 16:57:29.417 +09:00 [INF] Getting information for kanji 天
+2024-12-06 16:57:29.417 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "天", URL: https://www.wanikani.com/kanji/天
+2024-12-06 16:57:29.418 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/天
+2024-12-06 16:57:29.418 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%A4%A9
+2024-12-06 16:57:29.418 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%A4%A9
+2024-12-06 16:57:29.627 +09:00 [INF] Received HTTP response headers after 207.369ms - 200
+2024-12-06 16:57:29.627 +09:00 [INF] End processing HTTP request after 208.8772ms - 200
+2024-12-06 16:57:29.635 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/天 took "00:00:00.2171784" ms. Cached false
+2024-12-06 16:57:29.636 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:29.637 +09:00 [INF] Scraped WaniKani for kanji: "天"
+2024-12-06 16:57:29.638 +09:00 [INF] Found information for kanji 天
+2024-12-06 16:57:29.639 +09:00 [INF] Added card for kanji "天"
+2024-12-06 16:57:29.639 +09:00 [INF] Getting information for kanji 王
+2024-12-06 16:57:29.640 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "王", URL: https://www.wanikani.com/kanji/王
+2024-12-06 16:57:29.641 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/王
+2024-12-06 16:57:29.641 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E7%8E%8B
+2024-12-06 16:57:29.642 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E7%8E%8B
+2024-12-06 16:57:29.850 +09:00 [INF] Received HTTP response headers after 207.7253ms - 200
+2024-12-06 16:57:29.851 +09:00 [INF] End processing HTTP request after 209.4078ms - 200
+2024-12-06 16:57:29.853 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/王 took "00:00:00.2133404" ms. Cached false
+2024-12-06 16:57:29.860 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:29.862 +09:00 [INF] Scraped WaniKani for kanji: "王"
+2024-12-06 16:57:29.862 +09:00 [INF] Found information for kanji 王
+2024-12-06 16:57:29.864 +09:00 [INF] Added card for kanji "王"
+2024-12-06 16:57:29.864 +09:00 [INF] Getting information for kanji 左
+2024-12-06 16:57:29.864 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "左", URL: https://www.wanikani.com/kanji/左
+2024-12-06 16:57:29.866 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/左
+2024-12-06 16:57:29.866 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%B7%A6
+2024-12-06 16:57:29.867 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%B7%A6
+2024-12-06 16:57:30.071 +09:00 [INF] Received HTTP response headers after 204.1526ms - 200
+2024-12-06 16:57:30.072 +09:00 [INF] End processing HTTP request after 205.9455ms - 200
+2024-12-06 16:57:30.074 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/左 took "00:00:00.2094000" ms. Cached false
+2024-12-06 16:57:30.076 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:30.077 +09:00 [INF] Scraped WaniKani for kanji: "左"
+2024-12-06 16:57:30.077 +09:00 [INF] Found information for kanji 左
+2024-12-06 16:57:30.077 +09:00 [INF] Added card for kanji "左"
+2024-12-06 16:57:30.078 +09:00 [INF] Getting information for kanji 中
+2024-12-06 16:57:30.078 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "中", URL: https://www.wanikani.com/kanji/中
+2024-12-06 16:57:30.079 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/中
+2024-12-06 16:57:30.079 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E4%B8%AD
+2024-12-06 16:57:30.079 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E4%B8%AD
+2024-12-06 16:57:30.291 +09:00 [INF] Received HTTP response headers after 211.696ms - 200
+2024-12-06 16:57:30.292 +09:00 [INF] End processing HTTP request after 212.6959ms - 200
+2024-12-06 16:57:30.298 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/中 took "00:00:00.2197443" ms. Cached false
+2024-12-06 16:57:30.301 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:30.316 +09:00 [INF] Scraped WaniKani for kanji: "中"
+2024-12-06 16:57:30.317 +09:00 [INF] Found information for kanji 中
+2024-12-06 16:57:30.317 +09:00 [INF] Added card for kanji "中"
+2024-12-06 16:57:30.318 +09:00 [INF] Getting information for kanji 月
+2024-12-06 16:57:30.328 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "月", URL: https://www.wanikani.com/kanji/月
+2024-12-06 16:57:30.329 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/月
+2024-12-06 16:57:30.330 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E6%9C%88
+2024-12-06 16:57:30.331 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E6%9C%88
+2024-12-06 16:57:30.542 +09:00 [INF] Received HTTP response headers after 210.3559ms - 200
+2024-12-06 16:57:30.543 +09:00 [INF] End processing HTTP request after 212.9641ms - 200
+2024-12-06 16:57:30.548 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/月 took "00:00:00.2199000" ms. Cached false
+2024-12-06 16:57:30.552 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:30.553 +09:00 [INF] Scraped WaniKani for kanji: "月"
+2024-12-06 16:57:30.554 +09:00 [INF] Found information for kanji 月
+2024-12-06 16:57:30.554 +09:00 [INF] Added card for kanji "月"
+2024-12-06 16:57:30.555 +09:00 [INF] Getting information for kanji 々
+2024-12-06 16:57:30.555 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "々", URL: https://www.wanikani.com/kanji/々
+2024-12-06 16:57:30.557 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/々
+2024-12-06 16:57:30.557 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E3%80%85
+2024-12-06 16:57:30.558 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E3%80%85
+2024-12-06 16:57:30.774 +09:00 [INF] Received HTTP response headers after 215.6511ms - 200
+2024-12-06 16:57:30.775 +09:00 [INF] End processing HTTP request after 217.7896ms - 200
+2024-12-06 16:57:30.780 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/々 took "00:00:00.2239302" ms. Cached false
+2024-12-06 16:57:30.782 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:30.784 +09:00 [INF] Scraped WaniKani for kanji: "々"
+2024-12-06 16:57:30.784 +09:00 [INF] Found information for kanji 々
+2024-12-06 16:57:30.785 +09:00 [INF] Added card for kanji "々"
+2024-12-06 16:57:30.785 +09:00 [INF] Getting information for kanji 田
+2024-12-06 16:57:30.786 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "田", URL: https://www.wanikani.com/kanji/田
+2024-12-06 16:57:30.787 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/田
+2024-12-06 16:57:30.787 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E7%94%B0
+2024-12-06 16:57:30.788 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E7%94%B0
+2024-12-06 16:57:30.988 +09:00 [INF] Received HTTP response headers after 199.3291ms - 200
+2024-12-06 16:57:30.988 +09:00 [INF] End processing HTTP request after 201.2785ms - 200
+2024-12-06 16:57:30.990 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/田 took "00:00:00.2037424" ms. Cached false
+2024-12-06 16:57:30.992 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:30.993 +09:00 [INF] Scraped WaniKani for kanji: "田"
+2024-12-06 16:57:30.993 +09:00 [INF] Found information for kanji 田
+2024-12-06 16:57:30.994 +09:00 [INF] Added card for kanji "田"
+2024-12-06 16:57:30.994 +09:00 [INF] Getting information for kanji 右
+2024-12-06 16:57:30.995 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "右", URL: https://www.wanikani.com/kanji/右
+2024-12-06 16:57:31.000 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/右
+2024-12-06 16:57:31.000 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%8F%B3
+2024-12-06 16:57:31.001 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%8F%B3
+2024-12-06 16:57:31.204 +09:00 [INF] Received HTTP response headers after 202.905ms - 200
+2024-12-06 16:57:31.205 +09:00 [INF] End processing HTTP request after 204.9402ms - 200
+2024-12-06 16:57:31.210 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/右 took "00:00:00.2145927" ms. Cached false
+2024-12-06 16:57:31.212 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:31.215 +09:00 [INF] Scraped WaniKani for kanji: "右"
+2024-12-06 16:57:31.215 +09:00 [INF] Found information for kanji 右
+2024-12-06 16:57:31.216 +09:00 [INF] Added card for kanji "右"
+2024-12-06 16:57:31.217 +09:00 [INF] Getting information for kanji 六
+2024-12-06 16:57:31.217 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "六", URL: https://www.wanikani.com/kanji/六
+2024-12-06 16:57:31.218 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/六
+2024-12-06 16:57:31.219 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%85%AD
+2024-12-06 16:57:31.219 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%85%AD
+2024-12-06 16:57:31.424 +09:00 [INF] Received HTTP response headers after 204.3001ms - 200
+2024-12-06 16:57:31.425 +09:00 [INF] End processing HTTP request after 206.4242ms - 200
+2024-12-06 16:57:31.431 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/六 took "00:00:00.2129904" ms. Cached false
+2024-12-06 16:57:31.432 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:31.434 +09:00 [INF] Scraped WaniKani for kanji: "六"
+2024-12-06 16:57:31.434 +09:00 [INF] Found information for kanji 六
+2024-12-06 16:57:31.434 +09:00 [INF] Added card for kanji "六"
+2024-12-06 16:57:31.435 +09:00 [INF] Getting information for kanji 小
+2024-12-06 16:57:31.435 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "小", URL: https://www.wanikani.com/kanji/小
+2024-12-06 16:57:31.437 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/小
+2024-12-06 16:57:31.437 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%B0%8F
+2024-12-06 16:57:31.438 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%B0%8F
+2024-12-06 16:57:31.640 +09:00 [INF] Received HTTP response headers after 201.875ms - 200
+2024-12-06 16:57:31.641 +09:00 [INF] End processing HTTP request after 203.5579ms - 200
+2024-12-06 16:57:31.654 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/小 took "00:00:00.2175714" ms. Cached false
+2024-12-06 16:57:31.655 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:31.656 +09:00 [INF] Scraped WaniKani for kanji: "小"
+2024-12-06 16:57:31.657 +09:00 [INF] Found information for kanji 小
+2024-12-06 16:57:31.657 +09:00 [INF] Added card for kanji "小"
+2024-12-06 16:57:31.658 +09:00 [INF] Getting information for kanji 立
+2024-12-06 16:57:31.658 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "立", URL: https://www.wanikani.com/kanji/立
+2024-12-06 16:57:31.659 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/立
+2024-12-06 16:57:31.659 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E7%AB%8B
+2024-12-06 16:57:31.660 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E7%AB%8B
+2024-12-06 16:57:31.861 +09:00 [INF] Received HTTP response headers after 200.947ms - 200
+2024-12-06 16:57:31.862 +09:00 [INF] End processing HTTP request after 202.286ms - 200
+2024-12-06 16:57:31.864 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/立 took "00:00:00.2053816" ms. Cached false
+2024-12-06 16:57:31.865 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:31.866 +09:00 [INF] Scraped WaniKani for kanji: "立"
+2024-12-06 16:57:31.872 +09:00 [INF] Found information for kanji 立
+2024-12-06 16:57:31.873 +09:00 [INF] Added card for kanji "立"
+2024-12-06 16:57:31.873 +09:00 [INF] Getting information for kanji 丁
+2024-12-06 16:57:31.874 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "丁", URL: https://www.wanikani.com/kanji/丁
+2024-12-06 16:57:31.875 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/丁
+2024-12-06 16:57:31.875 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E4%B8%81
+2024-12-06 16:57:31.876 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E4%B8%81
+2024-12-06 16:57:32.098 +09:00 [INF] Received HTTP response headers after 222.0804ms - 200
+2024-12-06 16:57:32.099 +09:00 [INF] End processing HTTP request after 223.6373ms - 200
+2024-12-06 16:57:32.106 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/丁 took "00:00:00.2318038" ms. Cached false
+2024-12-06 16:57:32.108 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:32.108 +09:00 [INF] Scraped WaniKani for kanji: "丁"
+2024-12-06 16:57:32.109 +09:00 [INF] Found information for kanji 丁
+2024-12-06 16:57:32.109 +09:00 [INF] Added card for kanji "丁"
+2024-12-06 16:57:32.109 +09:00 [INF] Getting information for kanji 日
+2024-12-06 16:57:32.110 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "日", URL: https://www.wanikani.com/kanji/日
+2024-12-06 16:57:32.110 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/日
+2024-12-06 16:57:32.111 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E6%97%A5
+2024-12-06 16:57:32.111 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E6%97%A5
+2024-12-06 16:57:32.341 +09:00 [INF] Received HTTP response headers after 228.8798ms - 200
+2024-12-06 16:57:32.343 +09:00 [INF] End processing HTTP request after 232.1294ms - 200
+2024-12-06 16:57:32.348 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/日 took "00:00:00.2376017" ms. Cached false
+2024-12-06 16:57:32.350 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:32.355 +09:00 [INF] Scraped WaniKani for kanji: "日"
+2024-12-06 16:57:32.355 +09:00 [INF] Found information for kanji 日
+2024-12-06 16:57:32.355 +09:00 [INF] Added card for kanji "日"
+2024-12-06 16:57:32.356 +09:00 [INF] Getting information for kanji 刀
+2024-12-06 16:57:32.356 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "刀", URL: https://www.wanikani.com/kanji/刀
+2024-12-06 16:57:32.357 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/刀
+2024-12-06 16:57:32.358 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%88%80
+2024-12-06 16:57:32.358 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%88%80
+2024-12-06 16:57:32.557 +09:00 [INF] Received HTTP response headers after 197.6015ms - 200
+2024-12-06 16:57:32.558 +09:00 [INF] End processing HTTP request after 200.1046ms - 200
+2024-12-06 16:57:32.560 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/刀 took "00:00:00.2028491" ms. Cached false
+2024-12-06 16:57:32.562 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:32.563 +09:00 [INF] Scraped WaniKani for kanji: "刀"
+2024-12-06 16:57:32.564 +09:00 [INF] Found information for kanji 刀
+2024-12-06 16:57:32.564 +09:00 [INF] Added card for kanji "刀"
+2024-12-06 16:57:32.565 +09:00 [INF] Getting information for kanji 才
+2024-12-06 16:57:32.565 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "才", URL: https://www.wanikani.com/kanji/才
+2024-12-06 16:57:32.567 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/才
+2024-12-06 16:57:32.567 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E6%89%8D
+2024-12-06 16:57:32.568 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E6%89%8D
+2024-12-06 16:57:32.775 +09:00 [INF] Received HTTP response headers after 207.2498ms - 200
+2024-12-06 16:57:32.776 +09:00 [INF] End processing HTTP request after 208.7547ms - 200
+2024-12-06 16:57:32.782 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/才 took "00:00:00.2157546" ms. Cached false
+2024-12-06 16:57:32.784 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:32.786 +09:00 [INF] Scraped WaniKani for kanji: "才"
+2024-12-06 16:57:32.787 +09:00 [INF] Found information for kanji 才
+2024-12-06 16:57:32.788 +09:00 [INF] Added card for kanji "才"
+2024-12-06 16:57:32.788 +09:00 [INF] Getting information for kanji 千
+2024-12-06 16:57:32.789 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "千", URL: https://www.wanikani.com/kanji/千
+2024-12-06 16:57:32.790 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/千
+2024-12-06 16:57:32.790 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%8D%83
+2024-12-06 16:57:32.791 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%8D%83
+2024-12-06 16:57:33.000 +09:00 [INF] Received HTTP response headers after 208.0121ms - 200
+2024-12-06 16:57:33.000 +09:00 [INF] End processing HTTP request after 209.8375ms - 200
+2024-12-06 16:57:33.007 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/千 took "00:00:00.2173463" ms. Cached false
+2024-12-06 16:57:33.008 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:33.009 +09:00 [INF] Scraped WaniKani for kanji: "千"
+2024-12-06 16:57:33.010 +09:00 [INF] Found information for kanji 千
+2024-12-06 16:57:33.010 +09:00 [INF] Added card for kanji "千"
+2024-12-06 16:57:33.010 +09:00 [INF] Getting information for kanji 木
+2024-12-06 16:57:33.011 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "木", URL: https://www.wanikani.com/kanji/木
+2024-12-06 16:57:33.013 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/木
+2024-12-06 16:57:33.014 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E6%9C%A8
+2024-12-06 16:57:33.014 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E6%9C%A8
+2024-12-06 16:57:33.215 +09:00 [INF] Received HTTP response headers after 200.8757ms - 200
+2024-12-06 16:57:33.216 +09:00 [INF] End processing HTTP request after 202.7284ms - 200
+2024-12-06 16:57:33.220 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/木 took "00:00:00.2075512" ms. Cached false
+2024-12-06 16:57:33.225 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:33.227 +09:00 [INF] Scraped WaniKani for kanji: "木"
+2024-12-06 16:57:33.227 +09:00 [INF] Found information for kanji 木
+2024-12-06 16:57:33.228 +09:00 [INF] Added card for kanji "木"
+2024-12-06 16:57:33.228 +09:00 [INF] Getting information for kanji 水
+2024-12-06 16:57:33.229 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "水", URL: https://www.wanikani.com/kanji/水
+2024-12-06 16:57:33.230 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/水
+2024-12-06 16:57:33.230 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E6%B0%B4
+2024-12-06 16:57:33.231 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E6%B0%B4
+2024-12-06 16:57:33.450 +09:00 [INF] Received HTTP response headers after 219.107ms - 200
+2024-12-06 16:57:33.451 +09:00 [INF] End processing HTTP request after 220.8499ms - 200
+2024-12-06 16:57:33.458 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/水 took "00:00:00.2283378" ms. Cached false
+2024-12-06 16:57:33.459 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:33.463 +09:00 [INF] Scraped WaniKani for kanji: "水"
+2024-12-06 16:57:33.464 +09:00 [INF] Found information for kanji 水
+2024-12-06 16:57:33.464 +09:00 [INF] Added card for kanji "水"
+2024-12-06 16:57:33.465 +09:00 [INF] Getting information for kanji 白
+2024-12-06 16:57:33.465 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "白", URL: https://www.wanikani.com/kanji/白
+2024-12-06 16:57:33.466 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/白
+2024-12-06 16:57:33.467 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E7%99%BD
+2024-12-06 16:57:33.467 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E7%99%BD
+2024-12-06 16:57:33.665 +09:00 [INF] Received HTTP response headers after 197.1286ms - 200
+2024-12-06 16:57:33.665 +09:00 [INF] End processing HTTP request after 198.6349ms - 200
+2024-12-06 16:57:33.670 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/白 took "00:00:00.2040024" ms. Cached false
+2024-12-06 16:57:33.672 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:33.673 +09:00 [INF] Scraped WaniKani for kanji: "白"
+2024-12-06 16:57:33.673 +09:00 [INF] Found information for kanji 白
+2024-12-06 16:57:33.673 +09:00 [INF] Added card for kanji "白"
+2024-12-06 16:57:33.674 +09:00 [INF] Getting information for kanji 文
+2024-12-06 16:57:33.674 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "文", URL: https://www.wanikani.com/kanji/文
+2024-12-06 16:57:33.675 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/文
+2024-12-06 16:57:33.675 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E6%96%87
+2024-12-06 16:57:33.675 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E6%96%87
+2024-12-06 16:57:33.879 +09:00 [INF] Received HTTP response headers after 203.1794ms - 200
+2024-12-06 16:57:33.879 +09:00 [INF] End processing HTTP request after 204.3273ms - 200
+2024-12-06 16:57:33.888 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/文 took "00:00:00.2140843" ms. Cached false
+2024-12-06 16:57:33.891 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:33.892 +09:00 [INF] Scraped WaniKani for kanji: "文"
+2024-12-06 16:57:33.897 +09:00 [INF] Found information for kanji 文
+2024-12-06 16:57:33.898 +09:00 [INF] Added card for kanji "文"
+2024-12-06 16:57:33.899 +09:00 [INF] Getting information for kanji 円
+2024-12-06 16:57:33.899 +09:00 [INF] Fetching kanji information from WaniKani. Kanji: "円", URL: https://www.wanikani.com/kanji/円
+2024-12-06 16:57:33.900 +09:00 [INF] Cache miss. Fetching HTML from: https://www.wanikani.com/kanji/円
+2024-12-06 16:57:33.901 +09:00 [INF] Start processing HTTP request GET https://www.wanikani.com/kanji/%E5%86%86
+2024-12-06 16:57:33.901 +09:00 [INF] Sending HTTP request GET https://www.wanikani.com/kanji/%E5%86%86
+2024-12-06 16:57:34.102 +09:00 [INF] Received HTTP response headers after 200.211ms - 200
+2024-12-06 16:57:34.103 +09:00 [INF] End processing HTTP request after 201.9547ms - 200
+2024-12-06 16:57:34.104 +09:00 [INF] Getting HTML for https://www.wanikani.com/kanji/円 took "00:00:00.2049476" ms. Cached false
+2024-12-06 16:57:34.106 +09:00 [INF] Processing fetched html
+2024-12-06 16:57:34.107 +09:00 [INF] Scraped WaniKani for kanji: "円"
+2024-12-06 16:57:34.108 +09:00 [INF] Found information for kanji 円
+2024-12-06 16:57:34.108 +09:00 [INF] Added card for kanji "円"
+2024-12-06 16:57:34.109 +09:00 [INF] Finished getting information for kanji set ["玉","本","子","丸","正","土","犬","夕","出","目","火","五","四","手","天","王","左","中","月","々","田","右","六","小","立","丁","日","刀","才","千","木","水","白","文","円"]
+2024-12-06 16:57:34.114 +09:00 [INF] Finished filtering results for provider with key IKanjiInformationProvider: wk
+2024-12-06 16:57:34.115 +09:00 [INF] Finished adding cards to collection

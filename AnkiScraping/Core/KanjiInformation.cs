@@ -10,6 +10,12 @@ public class KanjiCardInformation
     /// </summary>
     public required Kanji Kanji { get; set; }
     
+    
+    /// <summary>
+    /// The provider ID for the kanji information.
+    /// </summary>
+    public required  KanjiProviderId ProviderId { get; set; }
+    
     /// <summary>
     /// The meanings of the kanji. Listed in order of most common to least common.
     /// </summary>

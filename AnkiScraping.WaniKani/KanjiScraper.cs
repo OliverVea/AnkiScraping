@@ -6,7 +6,6 @@ using Microsoft.Extensions.Logging;
 namespace AnkiScraping.WaniKani;
 
 public class WaniKaniScraper(
-    DebugJsonOptions debugJsonOptions,
     IHttpService httpService,
     ILogger<WaniKaniScraper> logger)
 {
@@ -56,9 +55,7 @@ public class WaniKaniScraper(
         
         if (logger.IsEnabled(LogLevel.Information))
         {
-            #pragma warning disable IL2026
-            var text = JsonSerializer.Serialize(information, debugJsonOptions.UnicodeOptions);
-            #pragma warning restore IL2026
+            var text = JsonSerializer.Serialize(information, WaniKaniJsonContext.Default.WaniKaniKanjiInformation);
             logger.LogInformation("Scraped WaniKani for kanji: {Kanji}, information: {Information}", kanji, text);
         }
         
