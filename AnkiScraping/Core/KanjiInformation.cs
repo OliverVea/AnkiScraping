@@ -3,18 +3,17 @@
 /// <summary>
 /// The information for a kanji card.
 /// </summary>
-public class KanjiCardInformation
+public class KanjiInformation
 {
     /// <summary>
     /// The kanji character.
     /// </summary>
     public required Kanji Kanji { get; set; }
     
-    
     /// <summary>
     /// The provider ID for the kanji information.
     /// </summary>
-    public required  KanjiProviderId ProviderId { get; set; }
+    public required  ProviderKey<IKanjiInformationProvider> ProviderKey { get; set; }
     
     /// <summary>
     /// The meanings of the kanji. Listed in order of most common to least common.
@@ -56,15 +55,3 @@ public class KanjiCardInformation
     /// </summary>
     public IReadOnlyList<VocabInformation>? VocabExamples { get; set; }
 }
-
-public readonly record struct Kanji(char Character);
-public readonly record struct KanjiMeaning(string Meaning);
-public readonly record struct RadicalInformation(string Radical, string Meaning);
-public readonly record struct VocabInformation(string Kanji, HiraganaString Hiragana, string Meaning);
-
-public readonly record struct KunYomiReading(HiraganaString Reading);
-public readonly record struct OnYomiReading(HiraganaString Reading);
-public readonly record struct NanoriReading(HiraganaString Reading);
-
-public readonly record struct HiraganaString(string Hiragana);
-

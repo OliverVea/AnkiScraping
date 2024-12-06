@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 
 namespace AnkiScraping.Anki;
 
-public class StoreCardsAsAnkiCardCollectionOperation(ILogger<StoreCardsAsAnkiCardCollectionOperation> logger)
+public class GetAnkiCardCollectionOperation(ILogger<GetAnkiCardCollectionOperation> logger)
 {
     private static readonly CardFieldType[] CardFieldOrder = [
         CardFieldType.Meaning,
@@ -16,7 +16,7 @@ public class StoreCardsAsAnkiCardCollectionOperation(ILogger<StoreCardsAsAnkiCar
         CardFieldType.VocabExamples
     ];
     
-    public async Task GetAnkiCardCollectionAsync(IAsyncEnumerable<KanjiInformation> kanjiInformation, CancellationToken ct = default)
+    public async Task<IAnkiCardCollectionWithFields> ExecuteAsync(IAsyncEnumerable<KanjiInformation> kanjiInformation, CancellationToken ct = default)
     {
         var cardCollection = AnkiCardCollectionBuilder.Create()
             .WithTags("Japanese", "Kanji")
@@ -26,9 +26,13 @@ public class StoreCardsAsAnkiCardCollectionOperation(ILogger<StoreCardsAsAnkiCar
         {
             var cardFields = MapToCardFields(kanji);
             cardCollection.AddCard(cardFields);
+            
+            logger.LogInformation("Added card for kanji {Kanji}", kanji.Kanji.Character);
         }
         
-        
+        logger.LogInformation("Finished adding cards to collection");
+
+        return cardCollection;
     }
     
     private static string[] MapToCardFields(KanjiInformation kanjiInformation)

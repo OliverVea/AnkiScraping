@@ -34,14 +34,6 @@ public partial class ScrapeCommand
                 .Length(1)
                 .WithMessage("Kanji character '{PropertyValue}' must be a single character. Use -l|--kanji-list to specify multiple characters.");
             
-            RuleFor(x => x.AllKanji)
-                .NotEmpty()
-                .WithMessage("At least one kanji character must be specified");
-            
-            RuleForEach(x => x.AllKanji)
-                .Must(CharacterSetHelper.IsKanji)
-                .WithMessage("Kanji character '{PropertyValue}' is not a valid kanji character");
-            
             RuleFor(x => x.OutputFile)
                 .NotEmpty()
                 .WithMessage("Output file must be specified");

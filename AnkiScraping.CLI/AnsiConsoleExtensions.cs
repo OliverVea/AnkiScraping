@@ -1,6 +1,11 @@
-﻿namespace AnkiScraping.Host;
+﻿using Spectre.Console;
 
-public class AnsiConsoleExtensions
+namespace AnkiScraping.Host;
+
+public static class AnsiConsoleExtensions
 {
-    
+    public static void MarkupErrorLine(this IAnsiConsole console, string message)
+    {
+        console.MarkupLine("[red]{0}[/]", message);
+    }
 }

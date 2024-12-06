@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <ItemGroup>
         <ProjectReference Include="..\AnkiScraping\AnkiScraping.csproj"/>
+        <ProjectReference Include="..\AnkiScraping.WaniKani\AnkiScraping.WaniKani.csproj"/>
         <ProjectReference Include="..\AnkiScraping.Cli\AnkiScraping.Cli.csproj"/>
     </ItemGroup>
 

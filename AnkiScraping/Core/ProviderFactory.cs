@@ -1,20 +1,28 @@
-﻿using AnkiScraping.Core.Operations;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace AnkiScraping.Core;
 
-public class KanjiProviderFactory(IServiceProvider serviceProvider)
+public class ProviderFactory(IServiceProvider serviceProvider, ILogger logger)
 {
-    public OneOf<IKanjiInformationProvider, KanjiProviderNotFound> GetProvider(KanjiProviderKeyOrAny providerId)
+    private ILogger Logger => logger.ForContext<ProviderFactory>();
+    
+    public OneOf<T, ProviderNotFound<T>> GetProvider<T>(ProviderQuery<T> providerQuery)
     {
-        var provider = providerId.TryPickT0(out var providerKey, out _)
-            ? serviceProvider.GetKeyedService<IKanjiInformationProvider>(providerKey)
-            : serviceProvider.GetService<IKanjiInformationProvider>();
+        Logger.Information("Getting provider for {ProviderQuery}", providerQuery);
         
-        return provider is null 
-            ? new KanjiProviderNotFound(providerId)
-            : OneOf<IKanjiInformationProvider, KanjiProviderNotFound>.FromT0(provider);
+        var provider = providerQuery.ProviderIdentifier.TryPickT0(out var providerKey, out _)
+            ? serviceProvider.GetKeyedService<T>(providerKey)
+            : serviceProvider.GetService<T>();
+
+        if (provider is null)
+        {
+            Logger.Error("Provider not found for {ProviderQuery}", providerQuery);
+            
+            return new ProviderNotFound<T>(providerQuery);
+        }
+        
+        Logger.Information("Resolved provider for {ProviderQuery} to {Provider}", providerQuery, provider);
+        
+        return OneOf<T, ProviderNotFound<T>>.FromT0(provider);
     }   
 }
-
-public readonly record struct KanjiProviderNotFound(KanjiProviderKeyOrAny ProviderId);

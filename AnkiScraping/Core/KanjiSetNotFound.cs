@@ -1,6 +1,3 @@
 ﻿namespace AnkiScraping.Core;
 
-public class KanjiSetNotFound
-{
-    
-}
+public readonly record struct KanjiSetNotFound(KanjiSetId KanjiSetId);

@@ -4,11 +4,12 @@ namespace AnkiScraping.WaniKani;
 
 public class WaniKaniKanjiMapper
 {
-    public KanjiCardInformation Map(WaniKaniKanjiInformation scrapedKanji)
+    public KanjiInformation Map(WaniKaniKanjiInformation scrapedKanji, ProviderKey<IKanjiInformationProvider> key)
     {
-        return new KanjiCardInformation
+        return new KanjiInformation
         {
             Kanji = new Kanji(scrapedKanji.Kanji),
+            ProviderKey = key,
             Meanings = scrapedKanji.Meanings?.Select(x => new KanjiMeaning(x)).ToArray(),
             OnYomi = scrapedKanji.OnYomi?.Select(x => new OnYomiReading(new HiraganaString(x))).ToArray(),
             KunYomi = scrapedKanji.KunYomi?.Select(x => new KunYomiReading(new HiraganaString(x))).ToArray(),

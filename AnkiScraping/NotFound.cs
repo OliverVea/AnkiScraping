@@ -1,6 +1,5 @@
-﻿namespace AnkiScraping;
+﻿using AnkiScraping.Core;
 
-public struct NotFound
-{
-    
-}
+namespace AnkiScraping;
+
+public readonly record struct KanjiNotFound(Kanji Kanji);

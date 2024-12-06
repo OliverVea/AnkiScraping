@@ -1,6 +1,10 @@
-﻿namespace AnkiScraping.Core;
+﻿using AnkiScraping.Core.Operations;
+
+namespace AnkiScraping.Core;
 
 public interface IKanjiInformationProvider
 {
-    Task<KanjiCardInformation> GetKanjiInformationAsync(char kanji, CancellationToken ct = default);
+    ProviderKey<IKanjiInformationProvider> ProviderKey { get; }
+    Task<OneOf<KanjiInformation, KanjiNotFound>> GetKanjiInformationAsync(Kanji kanji, CancellationToken ct = default);
+    IAsyncEnumerable<OneOf<KanjiInformation, KanjiNotFound>> GetKanjiInformationAsync(KanjiSet kanji, CancellationToken ct = default);
 }

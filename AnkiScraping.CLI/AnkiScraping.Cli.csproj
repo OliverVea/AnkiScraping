@@ -6,11 +6,22 @@
         <RootNamespace>AnkiScraping.Host</RootNamespace>
         <PublishAot>true</PublishAot>
         <PublishTrimmed>true</PublishTrimmed>
+        <UserSecretsId>7aa467b0-6dc4-4a70-aa6f-01781b15c3af</UserSecretsId>
+        <EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="FluentValidation" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Ini" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Console" />
+        <PackageReference Include="Serilog" />
+        <PackageReference Include="Serilog.Enrichers.Context" />
+        <PackageReference Include="Serilog.Extensions.Logging" />
+        <PackageReference Include="Serilog.Sinks.Console" />
+        <PackageReference Include="Serilog.Sinks.File" />
         <PackageReference Include="Spectre.Console"/>
         <PackageReference Include="Spectre.Console.Cli"/>
     </ItemGroup>
@@ -18,6 +29,13 @@
     <ItemGroup>
         <ProjectReference Include="..\AnkiScraping\AnkiScraping.csproj" />
         <ProjectReference Include="..\AnkiScraping.Caching\AnkiScraping.Caching.csproj" />
+        <ProjectReference Include="..\AnkiScraping.WaniKani\AnkiScraping.WaniKani.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="config.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

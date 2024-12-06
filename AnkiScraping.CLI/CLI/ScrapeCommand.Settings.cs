@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
-using System.Text;
+using AnkiScraping.Core;
+using AnkiScraping.Core.Operations;
 using Spectre.Console.Cli;
 
 namespace AnkiScraping.Host.CLI;
@@ -16,6 +17,10 @@ public partial class ScrapeCommand
         [CommandOption("-l|--kanji-list")]
         [DefaultValue(null)]
         public string? KanjiList { get; init; }
+        
+        [Description("The list of kanji sets to scrape information for.")]
+        [CommandOption("-s|--kanji-sets")]
+        public string[] KanjiSets { get; init; } = [];
         
         [Description("The name of the output file to write the scraped information to.")]
         [CommandOption("-o|--output")]
@@ -36,30 +41,5 @@ public partial class ScrapeCommand
         [CommandOption("--dry-run")]
         [DefaultValue(false)]
         public bool DryRun { get; init; }
-
-        public string AllKanji => _allKanji.Value;
-        private readonly Lazy<string> _allKanji;
-
-        public Settings()
-        {
-            _allKanji = new Lazy<string>(GetAllKanji);
-        }
-        
-        private string GetAllKanji()
-        {
-            var sb = new StringBuilder();
-            
-            foreach (var kanji in SingleKanji)
-            {
-                sb.Append(kanji);
-            }
-            
-            if (KanjiList != null)
-            {
-                sb.Append(KanjiList);
-            }
-            
-            return sb.ToString();
-        }
     }
 }

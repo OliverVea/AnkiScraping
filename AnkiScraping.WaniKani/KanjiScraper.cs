@@ -1,20 +1,23 @@
 ﻿using System.Text.Json;
 using AnkiScraping.Http;
 using HtmlAgilityPack;
-using Microsoft.Extensions.Logging;
+using OneOf.Types;
+using Serilog;
+using Serilog.Events;
 
 namespace AnkiScraping.WaniKani;
 
-public class WaniKaniScraper(
+public class KanjiScraper(
     IHttpService httpService,
-    ILogger<WaniKaniScraper> logger)
+    ILogger logger)
 {
     private const string WaniKaniKanjiInformationUrl = "https://www.wanikani.com/kanji/{0}";
+    private ILogger Logger { get; } =  logger.ForContext<WaniKaniKanjiInformationProvider>();
     
-    public async Task<WaniKaniKanjiInformation> ScrapeKanjiInformationAsync(char kanji, CancellationToken ct = default)
+    public async Task<OneOf<WaniKaniKanjiInformation, NotFound>> ScrapeKanjiInformationAsync(char kanji, CancellationToken ct = default)
     {
         var url = string.Format(WaniKaniKanjiInformationUrl, kanji);
-        logger.LogInformation("Fetching WaniKani for kanji: {Kanji}, URL: {Url}", kanji, url);
+        Logger.Information("Fetching kanji information from WaniKani. Kanji: {Kanji}, URL: {Url}", kanji, url);
 
         HtmlDocument document;
         
@@ -24,19 +27,17 @@ public class WaniKaniScraper(
         }
         catch (Exception e)
         {
-            logger.LogError(e, "Failed to fetch WaniKani for kanji: {Kanji}, URL: {Url}", kanji, url);
+            Logger.Error(e, "Failed to fetch WaniKani for kanji: {Kanji}, URL: {Url}", kanji, url);
             throw;
         }
         
-        if (logger.IsEnabled(LogLevel.Information))
+        if (Logger.IsEnabled(LogEventLevel.Debug))
         {
-            var text = document.DocumentNode.TryGetNodeWithClass("body", out var body) ? body.OuterHtml : "Failed to get body";
-            
-            logger.LogInformation("Fetched WaniKani for kanji: {Kanji}, Document length: {DocumentLength}", kanji, text.Length);
+            Logger.Debug("Fetched WaniKani for kanji: {Kanji}, Document: {DocumentLength}", kanji, document.DocumentNode.OuterHtml);
         }
         
         WaniKaniKanjiInformation? information;
-        logger.LogInformation("Processing fetched html");
+        Logger.Information("Processing fetched html");
         try
         {
             information = ScrapeInformation(document, kanji);
@@ -45,7 +46,7 @@ public class WaniKaniScraper(
         {
             var tempPath = Path.GetTempFileName();
             
-            logger.LogError(e, "Failed to scrape WaniKani for kanji: {Kanji}. Writing log to {TempPath}", kanji, tempPath);
+            Logger.Error(e, "Failed to scrape WaniKani for kanji: {Kanji}. Writing log to {TempPath}", kanji, tempPath);
             
             var text = document.DocumentNode.OuterHtml;
             await File.WriteAllTextAsync(tempPath, text, ct);
@@ -53,10 +54,14 @@ public class WaniKaniScraper(
             throw;
         }
         
-        if (logger.IsEnabled(LogLevel.Information))
+        if (Logger.IsEnabled(LogEventLevel.Debug))
         {
-            var text = JsonSerializer.Serialize(information, WaniKaniJsonContext.Default.WaniKaniKanjiInformation);
-            logger.LogInformation("Scraped WaniKani for kanji: {Kanji}, information: {Information}", kanji, text);
+            var json = JsonSerializer.Serialize(information, WaniKaniJsonContext.Default.WaniKaniKanjiInformation);
+            Logger.Debug("Scraped WaniKani for kanji: {Kanji}, information: {Information}", kanji, json);
+        }
+        else
+        {
+            Logger.Information("Scraped WaniKani for kanji: {Kanji}", kanji);
         }
         
         return information;
@@ -120,7 +125,7 @@ public class WaniKaniScraper(
         if (!listItem.TryGetNodeWithClass(CssClass.SubjectCharacterCharacters, out var characterElement) ||
             !listItem.TryGetNodeWithClass(CssClass.SubjectCharacterMeaning, out var meaningElement))
         {
-            logger.LogWarning("Failed to get radical information: listItem={ListItem}", listItem.OuterHtml);
+            Logger.Warning("Failed to get radical information: listItem={ListItem}", listItem.OuterHtml);
             return null;
         }
         var character = characterElement.InnerText;
@@ -128,7 +133,7 @@ public class WaniKaniScraper(
         
         if (character == null || meaning == null)
         {
-            logger.LogWarning("Failed to get radical information: character={Character}, meaning={Meaning}", character, meaning);
+            Logger.Warning("Failed to get radical information: character={Character}, meaning={Meaning}", character, meaning);
             return null;
         }
         
@@ -246,7 +251,7 @@ public class WaniKaniScraper(
             !htmlNode.TryGetNodeWithClass(CssClass.SubjectCharacterReading, out var readingElement) ||
             !htmlNode.TryGetNodeWithClass(CssClass.SubjectCharacterMeaning, out var meaningElement))
         {
-            logger.LogWarning("Failed to get vocab example: listItem={ListItem}", htmlNode.OuterHtml);
+            Logger.Warning("Failed to get vocab example: listItem={ListItem}", htmlNode.OuterHtml);
             return null;
         }
         
@@ -256,7 +261,7 @@ public class WaniKaniScraper(
         
         if (kanji == null || meaning == null || reading == null)
         {
-            logger.LogWarning("Failed to get vocab example: kanji={Kanji}, meaning={Meaning}", kanji, meaning);
+            Logger.Warning("Failed to get vocab example: kanji={Kanji}, meaning={Meaning}", kanji, meaning);
             return null;
         }
 
@@ -266,15 +271,19 @@ public class WaniKaniScraper(
 
     private static string[] SplitList(string text)
     {
-        return text.Split(",").Select(x => x.Trim()).Where(x => !x.Contains("none", StringComparison.InvariantCultureIgnoreCase)).ToArray();
+        return text
+            .Split(",")
+            .Select(x => x.Trim())
+            .Where(x => !x.Contains("none", StringComparison.InvariantCultureIgnoreCase))
+            .ToArray();
     }
 
-    public static class HtmlTags
+    private static class HtmlTags
     {
         public const string ListItem = "li";
     }
 
-    public static class ElementId
+    private static class ElementId
     {
         public const string RadicalSection = "section-components";
         public const string MeaningSection = "section-meaning";
@@ -283,14 +292,14 @@ public class WaniKaniScraper(
         public const string AmalgamationsSection = "section-amalgamations";
     }
 
-    public static class ReadingIndex
+    private static class ReadingIndex
     {
         public const int OnYomi = 0;
         public const int KunYomi = 1;
         public const int Nanori = 2;
     }
-    
-    public static class CssClass
+
+    private static class CssClass
     {
         public const string PageHeaderTitleText = "page-header__title-text";
         public const string SubjectCharacterCharacters = "subject-character__characters";

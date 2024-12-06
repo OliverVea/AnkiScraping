@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <ItemGroup>
+        <PackageReference Include="Serilog" />
         <PackageReference Include="HtmlAgilityPack" />
         <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" />
         <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
@@ -7,5 +8,9 @@
         <PackageReference Include="OneOf" />
         <PackageReference Include="OneOf.SourceGenerator" />
         <PackageReference Include="Spectre.Console.Json" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="../Olve.Operations/Olve.Operations.csproj" />
     </ItemGroup>
 </Project>

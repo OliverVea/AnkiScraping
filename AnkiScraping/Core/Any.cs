@@ -1,11 +1,6 @@
-﻿namespace AnkiScraping.Core.Operations;
+﻿namespace AnkiScraping.Core;
 
 public readonly record struct Any
 {
-    private const string Value = "Any";
-    
-    public override string ToString()
-    {
-        return Value;
-    }
+    public override string ToString() => "Any";
 }

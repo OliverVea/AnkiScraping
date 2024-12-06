@@ -1,6 +1,2 @@
-﻿namespace AnkiScraping.WaniKani;
-
-public class GlobalUsings
-{
-    
-}
+﻿global using OneOf;
+global using Serilog;

@@ -1,3 +1,3 @@
 ﻿namespace AnkiScraping.Core;
 
-public readonly record struct KanjiProviderNotFound<T>(ProviderQuery<T> ProviderId);
+public readonly record struct ProviderNotFound<T>(ProviderQuery<T> Query);

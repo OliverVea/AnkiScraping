@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using NeoSmart.Caching.Sqlite;
 using SQLitePCL;
 
@@ -6,14 +7,17 @@ namespace AnkiScraping.Caching;
 
 public static class ServiceExtensions
 {
-    private const string SqliteFilePath = "I:/RiderProjects/AnkiScraping/AnkiScraping.CLI/cache.db";
+    private const string ConfigurationKey = "Cache";
+    private const string DefaultSqliteFilePath = "./cache.db";
     
-    public static IServiceCollection AddSqliteIDistributedCache(this IServiceCollection services)
+    public static IServiceCollection AddSqliteIDistributedCache(this IServiceCollection services, IConfiguration configuration)
     {
         ISQLite3Provider provider = new SQLite3Provider_winsqlite3();
+        
+        var sqliteFilePath = configuration[ConfigurationKey] ?? DefaultSqliteFilePath;
     
         raw.SetProvider(provider);
-        services.AddSqliteCache(SqliteFilePath, provider);
+        services.AddSqliteCache(sqliteFilePath, provider);
         
         return services;
     }

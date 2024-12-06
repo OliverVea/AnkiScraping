@@ -1,6 +1,6 @@
-﻿namespace AnkiScraping.WaniKani;
+﻿using System.Text.Json.Serialization;
 
-public class WaniKaniJsonContex
-{
-    
-}
+namespace AnkiScraping.WaniKani;
+
+[JsonSerializable(typeof(WaniKaniKanjiInformation))]
+public partial class WaniKaniJsonContext : JsonSerializerContext;

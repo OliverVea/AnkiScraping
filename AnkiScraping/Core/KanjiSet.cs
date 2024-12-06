@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace AnkiScraping.Core.Operations;
+namespace AnkiScraping.Core;
 
 public readonly record struct KanjiSet(IReadOnlyCollection<Kanji> Kanji) : IEnumerable<Kanji>
 {

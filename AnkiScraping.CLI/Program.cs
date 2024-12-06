@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using AnkiScraping.Host.CLI;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Spectre.Console;
 using Spectre.Console.Cli;
 
 namespace AnkiScraping.Host;
@@ -18,15 +18,28 @@ public class Program
     {
         Console.OutputEncoding = Encoding.Unicode;
         
+        var configuration = new ConfigurationBuilder()
+            .AddIniFile("config.ini", optional: true)
+            .AddEnvironmentVariables("ANKI_SCRAPING_")
+            .AddUserSecrets<Program>(optional: true)
+            .Build();
+        
         var serviceCollection = new ServiceCollection();
-        serviceCollection.RegisterCliServices();
+        serviceCollection.RegisterCliServices(configuration);
 
         var registrar = new TypeRegistrar(serviceCollection);
         var commandApp = new CommandApp(registrar);
 
+        serviceCollection.AddSingleton<ScrapeCommand>();
+
+        serviceCollection.AddSingleton<ScrapeCommand>();
+        var serviceProvider = serviceCollection.BuildServiceProvider();
+        var scrapeCommand = serviceProvider.GetRequiredService<ScrapeCommand>();
+        
         commandApp.Configure(config =>
         {
             ScrapeCommand.AddToConfigurator(config);
+            ListKanjiSetsCommand.AddToConfigurator(config);
         });
         
         return await commandApp.RunAsync(args);

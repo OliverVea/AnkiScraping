@@ -1,25 +1,25 @@
 ﻿using AnkiScraping.Http;
 using AnkiScraping.WaniKani;
 using HtmlAgilityPack;
-using Microsoft.Extensions.Logging;
 using Moq;
+using Serilog;
 
 namespace AnkiScraping.Tests;
 
 public class Tests
 {
     private Mock<IHttpService> _httpServiceMock = null!;
-    private Mock<ILogger<WaniKaniScraper>> _loggerMock = null!;
+    private Mock<ILogger> _loggerMock = null!;
     
-    private WaniKaniScraper _scraper = null!;
+    private KanjiScraper _scraper = null!;
     
     [Before(Test)]
     public void Setup()
     {
         _httpServiceMock = new Mock<IHttpService>();
-        _loggerMock = new Mock<ILogger<WaniKaniScraper>>();
+        _loggerMock = new Mock<ILogger>();
         
-        _scraper = new WaniKaniScraper(new DebugJsonOptions(), _httpServiceMock.Object, _loggerMock.Object);
+        _scraper = new KanjiScraper(_httpServiceMock.Object, _loggerMock.Object);
     }
     
     [Test]
@@ -33,7 +33,11 @@ public class Tests
         var result = await _scraper.ScrapeKanjiInformationAsync(kanji);
         
         // Assert
-        await Assert.That(result.Kanji).IsEqualTo(kanji);
+        await Assert.That(result).HasMember(x => x.IsT0).EqualTo(true);
+        
+        var kanjiInformation = result.AsT0;
+        
+        await Assert.That(kanjiInformation.Kanji).IsEqualTo(kanji);
     }
     
     private async Task MockHttpService(char kanji)

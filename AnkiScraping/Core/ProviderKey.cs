@@ -1,9 +1,26 @@
-﻿namespace AnkiScraping.Core;
+﻿using AnkiScraping.Core.Operations;
 
-public readonly record struct KanjiProviderKey(string Value)
+namespace AnkiScraping.Core;
+
+public readonly record struct ProviderKey<T>(string ProviderIdentifier)
 {
+    private string ProviderTypeName => typeof(T).Name;
+    
     public override string ToString()
     {
-        return Value;
+        return $"{ProviderTypeName}: {ProviderIdentifier}";
+    }
+}
+
+public readonly record struct ProviderQuery<T>()
+{
+    private string ProviderTypeName => typeof(T).Name;
+    public OneOf<string, Any> ProviderIdentifier { get; init; } = new Any();
+
+    public override string ToString()
+    {
+        return ProviderIdentifier.TryPickT0(out var providerId, out _)
+            ? $"GET type='{ProviderTypeName}'&id='{providerId}'"
+            : $"GET type='{ProviderTypeName}'&id=any";
     }
 }
